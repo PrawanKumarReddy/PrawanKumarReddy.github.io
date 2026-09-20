@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prawan Kumar Reddy | Python Full Stack Developer | B.Tech CSE Graduate</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Portfolio of Seelam Sree Prawan Kumar Reddy, a Python Full Stack Developer from Hyderabad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F2F5F8;
+  --panel: #FFFFFF;
+  --ink: #12233D;
+  --muted: #55647A;
+  --blue: #2F6DB5;
+  --blue-soft: #E3EDF9;
+  --sun: #F5C518;
+  --line: #D5DCE6;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1826; --panel: #16233A; --ink: #E8EEF7; --muted: #9DABC0;
+    --blue: #7DB3F0; --blue-soft: #1B2E4A; --sun: #F5C518; --line: #263449;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1826; --panel: #16233A; --ink: #E8EEF7; --muted: #9DABC0;
+  --blue: #7DB3F0; --blue-soft: #1B2E4A; --sun: #F5C518; --line: #263449;
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--blue); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+.dl[hidden] { display: none; }
+button.btn { font: inherit; font-weight: 600; font-size: 16px; cursor: pointer; background: transparent; }
+button.btn.solid { background: var(--ink); }
+button.btn:hover { background: var(--blue); }
+.email { color: var(--ink) !important; font-size: 20px; margin: 0 0 18px !important; }
+.email b { user-select: all; -webkit-user-select: all; }
+.note { color: var(--muted); font-size: 14px; margin: 10px 0 0; }
+
+/* top bar */
+.bar { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center; padding: 22px 0; }
+.bar b { font-family: var(--display); font-weight: 800; font-size: 20px; }
+.bar nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.bar nav a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 15px; }
+.bar nav a:hover { color: var(--ink); }
+
+/* hero */
+.hero { padding: 56px 0 40px; }
+.hero h1 {
+  font-family: var(--display); font-weight: 800; letter-spacing: -0.02em;
+  font-size: clamp(40px, 8vw, 84px); line-height: 1.02; margin: 0 0 20px; max-width: 14ch;
+}
+.hero .headline { font-family: var(--display); font-weight: 700; font-size: clamp(20px, 3vw, 28px); margin: 0 0 10px; }
+.hero .role { font-size: clamp(19px, 2.6vw, 24px); font-weight: 500; margin: 0 0 8px; max-width: 34ch; line-height: 1.4; }
+.hero .where { color: var(--muted); margin: 0 0 28px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-block; padding: 12px 22px; border-radius: 999px; font-weight: 600; font-size: 16px;
+  text-decoration: none; border: 2px solid var(--ink); color: var(--ink);
+}
+.btn.solid { background: var(--ink); color: var(--bg); }
+.btn:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* explainer: the one memorable piece */
+.explain { margin: 48px 0 8px; padding: 28px; background: var(--panel); border: 2px solid var(--ink); border-radius: 20px; }
+.explain h2 { font-family: var(--display); font-size: 26px; margin: 0 0 6px; }
+.explain p.hint { margin: 0 0 18px; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.chip {
+  font: inherit; font-weight: 600; font-size: 15px; padding: 8px 16px; border-radius: 999px; cursor: pointer;
+  background: var(--bg); color: var(--ink); border: 2px solid var(--line);
+}
+.chip:hover { border-color: var(--blue); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.answer {
+  min-height: 96px; padding: 18px 20px; border-radius: 12px; background: var(--blue-soft);
+  border-left: 8px solid var(--sun); font-size: 18px; line-height: 1.6;
+}
+.answer.swap { animation: pop .28s ease-out; }
+@keyframes pop { from { opacity: .2; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* sections */
+.section { padding: 64px 0 8px; }
+.section h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 38px); letter-spacing: -0.01em; margin: 0 0 22px; }
+.about p { max-width: 62ch; margin: 0 0 14px; }
+
+.skills { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.skills div { display: grid; grid-template-columns: 170px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.skills dt { font-weight: 600; color: var(--muted); }
+.skills dd { margin: 0; font-size: 18px; font-weight: 500; }
+@media (max-width: 620px) { .skills div { grid-template-columns: 1fr; gap: 2px; } }
+
+/* projects */
+.project { padding: 32px 0; border-top: 2px solid var(--ink); display: grid; grid-template-columns: 1fr 1.6fr; gap: 20px 40px; }
+.project:last-of-type { border-bottom: 2px solid var(--ink); }
+.project h3 { font-family: var(--display); font-size: 26px; line-height: 1.15; margin: 0 0 12px; }
+.project .tech { color: var(--muted); font-size: 15px; margin: 0; }
+.project ul { margin: 0; padding-left: 20px; }
+.project li { margin-bottom: 8px; max-width: 60ch; }
+.project .my-part { margin-top: 14px; padding: 12px 16px; background: var(--blue-soft); border-radius: 10px; max-width: 60ch; }
+@media (max-width: 760px) { .project { grid-template-columns: 1fr; } }
+
+/* experience timeline: a real sequence */
+.timeline { position: relative; margin: 0; padding: 0 0 0 26px; list-style: none; border-left: 3px solid var(--blue); }
+.timeline li { position: relative; padding-bottom: 34px; }
+.timeline li::before {
+  content: ""; position: absolute; left: -36px; top: 8px; width: 15px; height: 15px; border-radius: 50%;
+  background: var(--sun); border: 3px solid var(--ink);
+}
+.timeline h3 { font-family: var(--display); font-size: 22px; margin: 0; }
+.timeline .meta { color: var(--muted); margin: 2px 0 10px; font-size: 15px; }
+.timeline ul { margin: 0; padding-left: 20px; }
+.timeline li li { padding: 0 0 6px; max-width: 62ch; }
+.timeline li li::before { display: none; }
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+@media (max-width: 760px) { .two { grid-template-columns: 1fr; gap: 0; } }
+.list { list-style: none; margin: 0; padding: 0; }
+.list li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.list li:first-child { border-top: 1px solid var(--line); }
+.list strong { display: block; font-weight: 600; }
+.list span { color: var(--muted); font-size: 15px; }
+
+/* contact */
+.contact { margin-top: 72px; padding: 48px 0 56px; border-top: 2px solid var(--ink); }
+.contact h2 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 5vw, 52px); line-height: 1.1; margin: 0 0 18px; max-width: 18ch; }
+.contact p { margin: 0 0 24px; max-width: 50ch; color: var(--muted); }
+.foot { color: var(--muted); font-size: 14px; margin-top: 36px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .answer.swap { animation: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="bar">
+    <b>Prawan</b>
+    <nav aria-label="Sections">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="top">
+      <h1 id="top">Seelam Sree Prawan Kumar Reddy</h1>
+      <p class="headline">Python Full Stack Developer | B.Tech CSE Graduate</p>
+      <p class="role">Passionate about building practical solutions with Python and AI.</p>
+      <p class="where">Fresher, Computer Science graduate, Hyderabad, India</p>
+      <div class="actions">
+        <a class="btn solid" href="#projects">See my projects</a>
+        <a class="btn" href="#contact">Contact me</a>
+        <a class="btn" href="Prawan_Kumar_Reddy_Resume.pdf" download>Download resume (PDF)</a>
+      </div>
+
+      <div class="explain">
+        <h2>Pick a topic. I'll explain it in one minute.</h2>
+        <p class="hint">This is how I like to teach: plain words and everyday examples.</p>
+        <div class="chips" role="group" aria-label="Topics">
+          <button class="chip" type="button" data-k="svm" aria-pressed="false">SVM</button>
+          <button class="chip" type="button" data-k="flask" aria-pressed="false">Flask</button>
+          <button class="chip" type="button" data-k="pandas" aria-pressed="false">Pandas</button>
+          <button class="chip" type="button" data-k="join" aria-pressed="false">SQL JOIN</button>
+          <button class="chip" type="button" data-k="recursion" aria-pressed="false">Recursion</button>
+          <button class="chip" type="button" data-k="api" aria-pressed="false">REST API</button>
+        </div>
+        <div class="answer" id="answer" aria-live="polite">Tap a topic above.</div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <h2>About me</h2>
+      <p>I finished my B.Tech in Computer Science and Engineering in 2026 with a CGPA of 7.9. I like Python, and I like building things that work end to end: data in, a trained model in the middle, a web page on the front.</p>
+      <p>Two internships taught me how to clean messy data, automate boring work, and present results to people who are not technical. I am looking for a fresher role as a Python Full Stack Developer. I build web apps with Python and Flask, and I keep growing my skills in data structures and algorithms.</p>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <div>
+          <h3>Intelligent ML-Driven Task Scheduling in Fog Computing</h3>
+          <p class="tech">Python, Machine Learning, Flask, HTML, iFogSim</p>
+        </div>
+        <div>
+          <ul>
+            <li>Built a web app with a Flask backend and an HTML front end. You type in a task and it predicts where the task should run, using a trained ML model.</li>
+            <li>Built and compared 3 ML classifiers for IoT task scheduling. The best one, SVM, reached about 98% accuracy.</li>
+            <li>Connected the app to the iFogSim simulation framework.</li>
+            <li>Cleaned and prepared IoT workload datasets, and created new features to improve the model.</li>
+          </ul>
+          <p class="my-part"><b>My role:</b> Collected and prepared the project dataset, made the required modifications to it, and defined the expected output of the prediction system.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div>
+          <h3>Hand Gesture Recognition for Social Media Navigation</h3>
+          <p class="tech">Python, OpenCV, MediaPipe, PyAutoGUI</p>
+        </div>
+        <div>
+          <ul>
+            <li>Built a hand-gesture control system that lets you move through social media without touching the keyboard or mouse.</li>
+            <li>Uses real-time computer vision: OpenCV reads the camera, MediaPipe finds the hand, and PyAutoGUI turns each gesture into a navigation command.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>Python, C, SQL, Java, JavaScript</dd></div>
+        <div><dt>Web</dt><dd>HTML, React, Django, Flask</dd></div>
+        <div><dt>Data and vision</dt><dd>Pandas, Matplotlib, Excel, Power BI, OpenCV, MediaPipe, machine learning classifiers</dd></div>
+        <div><dt>Tools</dt><dd>VS Code, Git, GitHub</dd></div>
+        <div><dt>Core computer science</dt><dd>OOP, data structures and algorithms, Linux fundamentals, debugging</dd></div>
+        <div><dt>Soft skills</dt><dd>Communication, presentation, teamwork, problem solving, time management</dd></div>
+        <div><dt>Language</dt><dd>English (professional working proficiency)</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <h3>Python Full Stack Developer Intern</h3>
+          <p class="meta">EduSkills Foundation, Hyderabad (virtual), July to September 2025</p>
+          <ul>
+            <li>Analysed student performance data with Python and Excel to find trends for curriculum planning.</li>
+            <li>Made bar charts and line graphs in Matplotlib so non-technical readers could follow the findings.</li>
+            <li>Kept data accurate across several reporting cycles and sent weekly analytics reports on time.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Python Developer Intern</h3>
+          <p class="meta">CODTECH IT Solutions, Hyderabad (remote), June to July 2025</p>
+          <ul>
+            <li>Wrote Python scripts to automate data extraction and cleaning, cutting manual processing time by about 40%.</li>
+            <li>Built data pipelines with Pandas to process structured datasets and produce summary reports for the team.</li>
+            <li>Worked with senior developers to debug, optimise, and document code so it was ready for production.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="education">
+      <h2>Education and certificates</h2>
+      <div class="two">
+        <div>
+          <ul class="list">
+            <li><strong>B.Tech, Computer Science and Engineering</strong><span>Nalla Narasimha Reddy Group of Institutions, JNTUH, 2022 to 2026, CGPA 7.9</span></li>
+            <li><strong>Intermediate (MPC)</strong><span>Narayana Junior College, 2020 to 2022, 90.7%</span></li>
+            <li><strong>Matriculation</strong><span>Viswabhrathi High School, 2019 to 2020, 97.6%</span></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="list">
+            <li><strong>Python for Data Science</strong><span>CODTECH IT Solutions, 2024</span></li>
+            <li><strong>Data Analytics for Beginners</strong><span>IBM SkillsBuild, 2025</span></li>
+            <li><strong>Skill Competency Certificate, SOAR: AI to Aspire (NSQF Level 4)</strong><span>Microsoft and NCVET, Skill India</span></li>
+            <li><strong>AI for ALL</strong><span>Intel Technologies India Pvt. Ltd. and Skill India</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <h2>Let's work together.</h2>
+    <p>I am open to fresher roles as a Python Full Stack Developer. Write to me and I will reply.</p>
+    <p class="email">Email: <b id="emailtext">prawans004@gmail.com</b></p>
+    <div class="actions">
+      <a class="btn solid" href="mailto:prawans004@gmail.com">Send email</a>
+      <button class="btn" type="button" id="copyemail">Copy email</button>
+      <a class="btn" href="https://www.linkedin.com/in/seelam-prawan-kumar-reddy-a88335326" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn" href="https://github.com/PrawanKumarReddy" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn" href="Prawan_Kumar_Reddy_Resume.pdf" download>Download resume (PDF)</a>
+    </div>
+    <p class="note" id="copymsg" role="status"></p>
+    <p class="foot">Seelam Sree Prawan Kumar Reddy, Hyderabad</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var cbtn = document.getElementById("copyemail");
+  var cmsg = document.getElementById("copymsg");
+  var etxt = document.getElementById("emailtext");
+  function selectEmail() {
+    var r = document.createRange(); r.selectNodeContents(etxt);
+    var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+  }
+  cbtn.addEventListener("click", function () {
+    var addr = etxt.textContent;
+    function fallback() {
+      selectEmail();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) {}
+      cmsg.textContent = ok ? "Email copied." : "Email selected. Press Copy on your keyboard or long-press it.";
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(function () { cmsg.textContent = "Email copied."; }, fallback);
+    } else { fallback(); }
+  });
+
+  var text = {
+    svm: "Imagine red and blue marbles on a table. SVM lays a ruler between them so the gap on both sides is as wide as possible. A new marble? Just check which side of the ruler it lands on.",
+    flask: "Flask is a waiter. The browser orders, Flask carries the order to your Python code, then brings the answer back to the table.",
+    pandas: "Pandas is Excel that you control with code. Load a table, clean it, group it and summarise it in a few lines, even with thousands of rows.",
+    join: "You have one guest list with names and another with meals. A JOIN matches each name to its meal using a shared ID, so you get one list with both.",
+    recursion: "Think of Russian nesting dolls. Open one, find a smaller one inside, and keep going until you reach the tiniest doll. That last doll is the stopping point.",
+    api: "A REST API is a restaurant menu. You can only order what is listed, in the way the kitchen understands, and you always get a clear answer back."
+  };
+  var box = document.getElementById("answer");
+  var chips = document.querySelectorAll(".chip");
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      chips.forEach(function (o) { o.setAttribute("aria-pressed", "false"); });
+      c.setAttribute("aria-pressed", "true");
+      box.textContent = text[c.getAttribute("data-k")];
+      box.classList.remove("swap");
+      void box.offsetWidth;
+      box.classList.add("swap");
+    });
+  });
+})();
+</script>
+</body>
+</html>
